@@ -1,6 +1,6 @@
 # _CalculatorJS_
 
-#### By _**Red Williams**_
+#### By _**Red Williams, Hayeong Pyeon & Kirsten Smith**_
 
 #### _Building a Calculator with JS_
 
