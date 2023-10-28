@@ -1,4 +1,4 @@
-/*
+
 const number1 = prompt("Enter a number:");
 const number2 = prompt("Enter another number:");
 
@@ -32,9 +32,11 @@ function conversion(temp) {
 };
 
 window.alert("Today's temperature in Celcius is: " + conversion(temp));
-*/
+
 
 //Cooking
+
+/*
 const ounces = prompt("Enter weight in ounces: ");
 const pounds = prompt("Enter weight in pounds: ");
 
@@ -44,4 +46,4 @@ function weedMeasurement(ounces, pounds) {
     return "Your weight in ounces is equal to " + ouncesToGrams  + " grams. \nYour weight in pounds is equal to " + poundsToGrams + " grams.";
 }
 
-window.alert(weedMeasurement(ounces, pounds));
+window.alert(weedMeasurement(ounces, pounds)); */
