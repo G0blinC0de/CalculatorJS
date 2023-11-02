@@ -1,27 +1,47 @@
+//Calculator
+// Business Logic
 
-const number1 = prompt("Enter a number:");
-const number2 = prompt("Enter another number:");
-
-
-function add(number1, number2){
-  return parseInt(number1) + parseInt(number2);
-}
-
-function subtract(number1, number2) {
-    return parseInt(number1) - parseInt(number2);
-}
-
-function multiply(number1, number2){
-    return parseInt(number1) * parseInt(number2);
-}
-
-function divide(number1, number2){
-    let result = parseInt(number1) / parseInt(number2);
-    return result.toFixed(2);
-}
-
-window.alert(number1 + " + " + number2 + " = " + add(number1, number2) + ", " + number1 + " - " + number2 + " = " + subtract(number1, number2) + ", " + number1 + " * " + number2 + " = " + multiply(number1, number2) + ", " + number1 + " / " + number2 + " = " + divide(number1, number2));
-
+function add(num1, num2) {
+    return num1 + num2;
+  }
+  
+  function subtract(num1, num2) {
+    return num1 - num2;
+  }
+  
+  function multiply(num1, num2) {
+    return num1 * num2;
+  }
+  
+  function divide(num1, num2) {
+    return num1 / num2;
+  }
+  
+  // User Interface Logic
+  function handleCalculation(event) {
+    event.preventDefault();
+    const number1 = parseInt(document.querySelector("input#input1").value);
+    const number2 = parseInt(document.querySelector("input#input2").value);
+    const operator = document.querySelector("input[name='operator']:checked").vale;
+    
+    let result;
+    if (operator === "add") {
+      result = add(number1, number2);
+    } else if (operator === "subtract") {
+      result = subtract(number1, number2);
+    } else if (operator === "multiply") {
+      result = multiply(number1, number2);
+    } else if (operator === "divide") {
+      result = divide(number1, number2);
+    }
+  
+    document.getElementById("output").inerText = result;
+  }
+  
+  window.addEventListener("load", function() {
+    const form = document.getElementById("calculator")
+    form.addEventListener("submit", handleCalculation);
+  });
 //Temperature
 /*
 const temp = prompt("Enter today's temperature in Fahreneit:"); 
@@ -36,7 +56,7 @@ window.alert("Today's temperature in Celcius is: " + conversion(temp));
 
 //Cooking
 
-/*
+
 const ounces = prompt("Enter weight in ounces: ");
 const pounds = prompt("Enter weight in pounds: ");
 
